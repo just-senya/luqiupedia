@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>home page</title>
+</head>
+<body>
+    <h1>Welcome to Liquipedia</h1>
+    {% if tournaments %}
+        {% for tournament in tournaments %}
+            <a href="{% url 'tournament' tournament.id%}" > {{ tournament.tourname }} </a><br>
+
+        {% endfor %}
+    {% else %}
+        <h3> There are no upcoming tournaments </h3>
+    {% endif %}
+
+</body>
+</html>

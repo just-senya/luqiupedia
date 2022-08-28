@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ tournament.tourname }}</title>
+</head>
+<body>
+    {% for participant in tournament.participants.all %}
+        <h4>{{ participant }}</h4><br>
+    {% endfor %}
+</body>
+</html>
